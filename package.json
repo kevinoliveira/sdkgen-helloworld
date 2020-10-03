@@ -1,0 +1,22 @@
+{
+    "name": "todo-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "npx ts-node main.ts",
+        "generate": "npx sdkgen example.sdkgen -t typescript_nodeserver -o generated.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@sdkgen/cli": "^1.1.0",
+        "@sdkgen/node-runtime": "^1.1.0",
+        "ts-node": "^8.8.1",
+        "typescript": "^3.8.3"
+    },
+    "devDependencies": {
+        "@types/node": "^12.12.34"
+    }
+}

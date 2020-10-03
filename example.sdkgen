@@ -1,0 +1,69 @@
+import "./anotherFile"
+
+// VERY SIMPLE EXAMPLE
+fn sayHello(
+    name: string,
+): string
+
+fn sum(
+    numberA: int,
+    numberB: int
+): int
+
+
+// NOT SO SIMPLE EXAMPLE
+type SimpleSpecie {
+    name: string
+}
+
+type BiologyKingdom enum { Animalia Plantae Fungi Protista Monera }
+
+type BiologyPhylum enum {
+    Acanthocephala
+    Annelida
+    Arthropoda
+    Brachiopoda
+    Bryozoa
+    Chaetognatha
+    Chordata
+    Cnidaria
+    Ctenophora
+    Cycliophora
+    Echinodermata
+    Entoprocta
+    Gastrotricha
+    Gnathostomulida
+    Hemichordata
+    Kinorhyncha
+    Loricifera
+    Micrognathozoa
+    Mollusca
+    Nematoda
+    Nematomorpha
+    Nemertea
+    Onychophora
+    Orthonectida
+    Phoronida
+    Placozoa
+    Platyhelminthes
+    Porifera
+    Priapulida
+    Rhombozoa
+    Rotifera
+    Sipuncula
+    Tardigrada
+    Xenacoelomorpha
+}
+
+type ScientificClassification {
+    kingdom: BiologyKingdom
+    phylum:	BiologyPhylum?
+    class:	string?
+}
+
+type FullSpecieData {
+    ...SimpleSpecie
+    ...ScientificClassification
+}
+
+fn getSpecies(): FullSpecieData[]
